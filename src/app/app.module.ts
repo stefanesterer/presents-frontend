@@ -1,21 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { InvitationsModule } from './invitations/invitations.module';
 
 import { AppComponent } from './app.component';
-import { InvitationsComponent } from './invitations/invitations.component';
-import { InvitationsCreateComponent } from './invitations-create/invitations-create.component';
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InvitationsComponent,
-    InvitationsCreateComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-  FormsModule
+    InvitationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
