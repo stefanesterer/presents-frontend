@@ -1,5 +1,6 @@
-import{Component, OnInit}from '@angular/core';
-import {InvitationCreate}from './invitation-create';
+import { Component, OnInit } from '@angular/core';
+import { InvitationCreate } from './invitation-create';
+import { InvitationsCreateService } from './invitations-create.service';
 
 @Component({
   selector: 'app-invitations-create',
@@ -8,17 +9,17 @@ import {InvitationCreate}from './invitation-create';
 })
 export class InvitationsCreateComponent implements OnInit {
 
-  invitationCreate : InvitationCreate = {
-    name: "", email: ""}
+  invitationCreate: InvitationCreate = {
+    name: "", email: ""
+  }
 
-  constructor() { }
+  constructor(private invitationCreateService: InvitationsCreateService) { }
 
   ngOnInit() {
   }
 
   create(): void {
-    console.log(this.invitationCreate);
-  // todo: communicate with rest backend and get back UUID
+    this.invitationCreateService.create(this.invitationCreate);
   }
 
 }

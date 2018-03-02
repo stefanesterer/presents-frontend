@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InvitationsComponent } from './invitations.component';
 import { InvitationsCreateComponent } from './invitations-create/invitations-create.component';
 import { FormsModule } from '@angular/forms';
+import { InvitationsCreateService } from './invitations-create/invitations-create.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     InvitationsComponent,
     InvitationsCreateComponent
-  ]
+  ],
+  providers: [InvitationsCreateService]
 })
 export class InvitationsModule { }
