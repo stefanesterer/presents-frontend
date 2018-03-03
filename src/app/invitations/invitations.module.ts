@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { InvitationsComponent } from './invitations.component';
 import { InvitationsCreateComponent } from './invitations-create/invitations-create.component';
@@ -9,7 +10,8 @@ import { InvitationsCreateService } from './invitations-create/invitations-creat
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     InvitationsComponent

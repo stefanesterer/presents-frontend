@@ -19,7 +19,8 @@ export class InvitationsCreateComponent implements OnInit {
   }
 
   create(): void {
-    this.invitationCreateService.create(this.invitationCreate);
+    this.invitationCreateService.create(this.invitationCreate)
+      .subscribe( result => console.log("result: " + result.uuid));
   }
 
 }
